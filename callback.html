@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get("code");
+      if (code) {
+        window.location.href = `closetful://naver-login?code=${code}`;
+      } else {
+        document.write("로그인 실패 혹은 코드 없음");
+      }
+    </script>
+  </head>
+  <body>
+    <p>잠시만 기다려주세요...</p>
+  </body>
+</html>
